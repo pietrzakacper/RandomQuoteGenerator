@@ -28,17 +28,26 @@ header:hover{
 }
 
 #generate-btn{
-  background-color: #134C09;
-  min-height: 30px !important;
+  background-color: #1d6011;
   border: 3px ridge white;
   border-radius: 5px;
   margin-top: 10px;
 }
 
 #generate-btn:hover{
+  color: white;
   cursor: pointer;
   border-style: groove;
   background-color: #114608;
+}
+
+#twitter-btn{
+  border: 3px ridge white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+#twitter-btn:hover{
+  border-style: groove;
 }
 
 #quote{
@@ -57,6 +66,8 @@ header:hover{
   font-weight: bolder;
 }
 
-#text-before-quote{
-
+#footer{
+  background-color: rgb(190, 190, 190) !important;
+  color: black;
+  margin-top: 30px;
 }
