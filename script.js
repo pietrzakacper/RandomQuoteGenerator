@@ -7,16 +7,19 @@ function getRandomQuote() {
         },
         url: 'https://andruxnet-random-famous-quotes.p.mashape.com/',
         success: function(response) {
-                var jsonObj = JSON.parse(response);
-                document.getElementById("quote-text").innerHTML = jsonObj.quote;
-                document.getElementById("author").innerHTML = jsonObj.author;
-      }
+            var jsonObj = JSON.parse(response);
+            document.getElementById("quote-text").innerHTML = jsonObj.quote;
+            document.getElementById("author").innerHTML = jsonObj.author;
+            $("#twitter-anchor").attr("href",
+            "https://twitter.com/intent/tweet?text=" +
+            jsonObj.quote + "%0A" + jsonObj.author +
+            "%0A&url=https://pietrzakacper.github.io/RandomQuoteGenerator");
+        }
     });
 }
-
-$(document).ready(function() {
-    getRandomQuote();
-    $("#generate-btn").on("click", function() {
+    $(document).ready(function() {
         getRandomQuote();
+        $("#generate-btn").on("click", function() {
+            getRandomQuote();
+        });
     });
-});
